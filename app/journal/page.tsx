@@ -4,6 +4,8 @@ import type { JournalEntry } from '@/lib/supabase'
 import JournalEntryCard from  '@/components/JournalEntryCard'
 import { ArrowLeft, PenLine } from 'lucide-react'
 
+export const revalidate = 0
+
 async function getAllEntries(): Promise<JournalEntry[]> {
   const { data, error } = await supabase
     .from('journal_entries')

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { ArrowLeft, Send } from 'lucide-react'
 
-const MOODS = ['💛', '🥺', '☁️', '✨', '😂', '🌙']
+const MOODS = ['😹', '😈', '🍑', '💅', '🫦', '👏']
 
 export default function NewEntryPage() {
   const router = useRouter()
@@ -39,7 +39,7 @@ export default function NewEntryPage() {
           <ArrowLeft size={14} /> Journal
         </Link>
         <h1 className="font-serif text-3xl font-medium text-ink mb-1">New Entry</h1>
-        <p className="text-ink-muted text-sm mb-8">What's on your heart today?</p>
+        <p className="text-ink-muted text-sm mb-8">What nosy question do you have today?</p>
       </div>
 
       <div className="space-y-5 animate-fade-up delay-200">
@@ -66,7 +66,7 @@ export default function NewEntryPage() {
         <div>
           <p className="section-label mb-2">Entry</p>
           <textarea className="input-field resize-none font-sans leading-relaxed"
-            placeholder="Write freely. This is just for us." rows={10}
+            placeholder="Write whatever you want. Nosy ass questions, head noise, how much you want to go to Knockout and see me..." rows={10}
             value={content} onChange={(e) => setContent(e.target.value)} />
         </div>
 
