@@ -25,7 +25,7 @@ export default async function JournalPage() {
           <Link href="/" className="flex items-center gap-1.5 text-ink-muted hover:text-ink transition-colors text-sm mb-2">
             <ArrowLeft size={14} /> Home
           </Link>
-          <h1 className="font-serif text-3xl font-medium text-ink">Our Journal</h1>
+          <h1 className="font-serif text-3xl font-medium text-ink">Stored Journal</h1>
           <p className="text-ink-muted text-sm mt-1">{entries.length} {entries.length === 1 ? 'memory' : 'memories'} so far</p>
         </div>
         <Link href="/journal/new" className="btn-primary flex items-center gap-2">

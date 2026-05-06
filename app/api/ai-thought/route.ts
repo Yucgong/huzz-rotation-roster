@@ -13,7 +13,7 @@ export async function GET() {
       max_tokens: 120,
       messages: [{
         role: 'user',
-        content: `Generate a light mean message like "You should use more deodorant", "Bet you're with your other hoes" or any words of discouragement directed at ${herName}. 1-2 sentences only. Mean but tasteful, not overly offensive. Return ONLY the thought, nothing else.`,
+        content: `Generate a light mean message like "You should use more deodorant", "Bet you're with your other boys", teasing her that she's with another boy or any words of discouragement directed at ${herName}. 1-2 sentences only. Mean but tasteful, not overly offensive. Return ONLY the thought, nothing else.`,
       }],
     })
 
