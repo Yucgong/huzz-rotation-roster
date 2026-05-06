@@ -66,7 +66,7 @@ export default function NewEntryPage() {
         <div>
           <p className="section-label mb-2">Entry</p>
           <textarea className="input-field resize-none font-sans leading-relaxed"
-            placeholder="Write whatever you want. Nosy ass questions, head noise, how much you want to go to Knockout and see me..." rows={10}
+            placeholder="Write whatever you want. Nosy ass questions, head noise, things you want to do, how much you want to go to Knockout and see me..." rows={10}
             value={content} onChange={(e) => setContent(e.target.value)} />
         </div>
 
