@@ -13,7 +13,8 @@ export async function GET() {
       max_tokens: 120,
       messages: [{
         role: 'user',
-        content: `Generate a light mean message like "${herName}, you should use more deodorant", "Bet you're with your other boys", "Halloween is over, ${herName}, you can take your mask off" teasing her or any words of discouragement directed at ${herName}. 1-2 sentences only. Mean but tasteful, not overly offensive. Return ONLY the thought, nothing else.`,
+        content: `Generate funny pro-feminist/anti-period message for ${herName} as she is about to have her period message like "${herName}, I can literally feel the anger come in me when thinking about how period cramp exists", "You are pregnant, ${herName}", etc. 1-2 sentences only. Funny but tasteful, not overly offensive and a bit supportive. Return ONLY the thought, nothing else.`,
+        // content: `Generate a light mean message like "${herName}, you should use more deodorant", "Bet you're with your other boys", "Halloween is over, ${herName}, you can take your mask off" teasing her or any words of discouragement directed at ${herName}. 1-2 sentences only. Mean but tasteful, not overly offensive. Return ONLY the thought, nothing else.`,
       }],
     })
 
