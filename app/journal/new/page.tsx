@@ -25,7 +25,7 @@ export default function NewEntryPage() {
 
   const yourName = process.env.NEXT_PUBLIC_YOUR_NAME || 'You'
   const herName = process.env.NEXT_PUBLIC_HER_NAME || 'Her'
-  
+   
   useEffect(() => {
     if (user) setAuthor(user)
   }, [user])
