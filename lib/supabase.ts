@@ -12,4 +12,5 @@ export type JournalEntry = {
   content: string
   author: string
   mood?: string
+  photo_url?: string  // ← new
 }
