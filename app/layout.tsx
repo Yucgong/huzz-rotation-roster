@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { UserProvider } from '@/components/UserContext'
 
 export const metadata: Metadata = {
   title: 'Huzz Rotation Roster',
@@ -22,8 +23,41 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-cream-50 text-ink min-h-screen font-sans antialiased">
-        {children}
+        <UserProvider>
+          {children}
+        </UserProvider>
       </body>
     </html>
   )
 }
+
+
+// import type { Metadata } from 'next'
+// import './globals.css'
+
+// export const metadata: Metadata = {
+//   title: 'Huzz Rotation Roster',
+//   description: 'A private space for the two of us',
+// }
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode
+// }) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         <link rel="preconnect" href="https://fonts.googleapis.com" />
+//         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+//         <link
+//           href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap"
+//           rel="stylesheet"
+//         />
+//       </head>
+//       <body className="bg-cream-50 text-ink min-h-screen font-sans antialiased">
+//         {children}
+//       </body>
+//     </html>
+//   )
+// }

@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase } from '@/lib/supabase'
 import { ArrowLeft, Send, ImagePlus, X } from 'lucide-react'
+import { useUser } from '@/components/UserContext'
+import { useEffect } from 'react'
 
 const MOODS = ['😹', '😈', '🍑', '💅', '🫦', '👏']
 
@@ -12,7 +14,9 @@ export default function NewEntryPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
-  const [author, setAuthor] = useState(process.env.NEXT_PUBLIC_YOUR_NAME || '')
+//   const [author, setAuthor] = useState(process.env.NEXT_PUBLIC_YOUR_NAME || '')
+  const { user } = useUser()
+  const [author, setAuthor] = useState('')
   const [mood, setMood] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
@@ -21,6 +25,10 @@ export default function NewEntryPage() {
 
   const yourName = process.env.NEXT_PUBLIC_YOUR_NAME || 'You'
   const herName = process.env.NEXT_PUBLIC_HER_NAME || 'Her'
+  
+  useEffect(() => {
+    if (user) setAuthor(user)
+  }, [user])
 
   const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]

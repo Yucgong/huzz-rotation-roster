@@ -28,8 +28,9 @@ export async function GET() {
         content: `Today's date is ${today}. Generate a single thought-provoking "question of the day" for a early stage (Not officially boyfriend and girlfriend) long distance relationship to ask each other.
 
         The question should:
-        - Be deep and meaningful, helping them understand each other better
-        - Explore values, dreams, memories, fears, or hopes
+        - Be deep and meaningful, helping them understand different outlooks on life, values
+        - Explore values, memories, fears, or hopes
+        - Does not have to be relationship-focused, can be about life in general, but should help them understand each other better
         - Be open-ended with no right or wrong answer
         - Feel intimate and can also be uncomfortable
         - Can also be scenario-based, to see how the other thinks and feels about certain situations and moral values
