@@ -25,7 +25,7 @@ export async function GET() {
       max_tokens: 120,
       messages: [{
         role: 'user',
-        content: `Today's date is ${today}. Generate a single thought-provoking "question of the day" for a early stage long distance relationship to ask each other.
+        content: `Today's date is ${today}. Generate a single thought-provoking "question of the day" for a early stage (Not officially boyfriend and girlfriend) long distance relationship to ask each other.
 
         The question should:
         - Be deep and meaningful, helping them understand each other better
