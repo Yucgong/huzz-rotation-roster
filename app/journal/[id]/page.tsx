@@ -11,9 +11,10 @@ async function getEntry(id: string): Promise<JournalEntry | null> {
   return data
 }
 
-export default async function EntryPage({ params }: { params: { id: string } }) {
-  const entry = await getEntry(params.id)
-  if (!entry) notFound()
+export default async function EntryPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params
+    const entry = await getEntry(id)
+    if (!entry) notFound()
 
   return (
     <main className="min-h-screen px-4 py-10 max-w-2xl mx-auto">
