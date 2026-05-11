@@ -16,7 +16,7 @@ export default function ThoughtCard() {
   return (
     <div className="card animate-fade-up delay-400 relative overflow-hidden">
       <span className="absolute top-3 right-5 font-serif text-7xl text-cream-200 leading-none select-none pointer-events-none">"</span>
-      <p className="section-label mb-4">Question of the day</p>
+      <p className="section-label mb-4">Task of the day</p>
       {loading ? (
         <div className="space-y-2">
           <div className="h-4 bg-cream-100 rounded animate-pulse w-full" />

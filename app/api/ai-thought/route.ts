@@ -25,17 +25,23 @@ export async function GET() {
       max_tokens: 120,
       messages: [{
         role: 'user',
-        content: `Today's date is ${today}. Generate a single thought-provoking "question of the day" for a early stage (Not officially boyfriend and girlfriend) long distance relationship to ask each other.
+        content: 
+        `Today's date is ${today}. Generate a single fun daily activity or challenge for an early-stage long distance couple (not yet officially boyfriend and girlfriend) to do together or in parallel today.
 
-        The question should:
-        - Be deep and meaningful, helping them understand different outlooks on life, values
-        - Explore values, memories, fears, or hopes
-        - Does not have to be relationship-focused, can be about life in general, but should help them understand each other better
-        - Be open-ended with no right or wrong answer
-        - Feel intimate and can also be uncomfortable
-        - Can also be scenario-based, to see how the other thinks and feels about certain situations and moral values
+        The activity should:
+        - Be low-effort and doable from anywhere with just a phone
+        - Feel spontaneous, playful, or intimate — not forced or cheesy
+        - Involve both people doing something in parallel, sharing something, or creating something together
+        - Vary in type: some days a photo challenge, some days a voice memo, a mini game, a creative prompt, a shared ritual, or a small dare
+        - Occasionally be silly or lighthearted, occasionally tender or quietly romantic
+        - Help them feel present in each other's day despite the distance
         
-        Return ONLY the question itself, nothing else.`,
+        Examples of the tone and style (do not reuse these):
+        - "Step outside right now and photograph the sky above you. Send it at the same time. You're under the same one."
+        - "Send a voice memo of whatever's in your head at this exact moment. No editing, no do-overs."
+        - "Draw something in under 2 minutes and send it. Let them guess what it is."
+        
+        Return ONLY the activity itself as 1–2 short sentences. No title, no label, no explanation — just the prompt they'd send each other.`,
       }],
     })
 
@@ -57,6 +63,19 @@ export async function GET() {
     return NextResponse.json({ thought: fallbacks[new Date().getDate() % fallbacks.length] })
   }
 }
+
+// Previous prompt ideas:
+        // `Today's date is ${today}. Generate a single thought-provoking "question of the day" for a early stage (Not officially boyfriend and girlfriend) long distance relationship to ask each other.
+
+        // The question should:
+        // - Be deep and meaningful, helping them understand different outlooks on life, values
+        // - Explore values, memories, fears, or hopes
+        // - Does not have to be relationship-focused, can be about life in general, but should help them understand each other better
+        // - Be open-ended with no right or wrong answer
+        // - Feel intimate and can also be uncomfortable
+        // - Can also be scenario-based, to see how the other thinks and feels about certain situations and moral values
+        
+        // Return ONLY the question itself, nothing else.`,
 
 // import { NextResponse } from 'next/server'
 // import Anthropic from '@anthropic-ai/sdk'
