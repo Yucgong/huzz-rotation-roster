@@ -37,7 +37,7 @@ export async function GET() {
         - Help them feel present in each other's day despite the distance
         
         Examples of the tone and style (do not reuse these):
-        - "Step outside right now and photograph the sky above you. Send it at the same time. You're under the same one."
+        - "Both read the same single page or short story today, then voice-memo each other your reactions. No prep, no pressure."
         - "Send a voice memo of whatever's in your head at this exact moment. No editing, no do-overs."
         - "Draw something in under 2 minutes and send it. Let them guess what it is."
         
